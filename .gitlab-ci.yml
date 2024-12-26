@@ -1,0 +1,12 @@
+
+stages:
+  - test
+
+test_job:
+  stage: test
+  image: python:3  # Use Python 3 Docker image
+  before_script:
+    - pip install -r requirements.txt  # Optional: Install dependencies from requirements.txt
+  script:
+    - python3 helloworld.py  # Run the Python script
+
